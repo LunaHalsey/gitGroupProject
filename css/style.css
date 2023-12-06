@@ -1,0 +1,357 @@
+/* Set character encoding to UTF-8 */
+@charset "UTF-8";
+
+/* Apply box-sizing to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Main content area padding */
+main {
+    padding-top: 2rem;
+}
+
+/* Header 1 styling */
+h1 {
+    font-family: Verdana, "Geneva", Tahoma, sans-serif;
+    text-align: center;
+    font-size: 3em;
+    overflow-wrap: break-word;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Header 2 styling */
+h2 {
+    font-family: Verdana, "Geneva", Tahoma, sans-serif;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Header 3 styling */
+h3 {
+    font-family: Verdana, "Geneva", Tahoma, sans-serif;
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 1rem;
+}
+
+/* Body styling */
+body {
+    line-height: 1.5;
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    color: #f2f2f2;
+}
+
+/* Clearfix for rows */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* Column styling for different screen sizes */
+[class*="col-"] {
+    float: left;
+    /* padding: 15px; */
+}
+
+  /* Mobile responsiveness for columns */
+[class*="col-"] {
+    width: 100vw;
+    padding: 1rem;
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 1260px) {
+    /* Desktop column widths */
+    .col-1 {width: 4.16%;}
+    .col-2 {width: 8.33%;}
+    .col-3 {width: 12.5%;}
+    .col-4 {width: 16.66%;}
+    .col-5 {width: 20.83%;}
+    .col-6 {width: 25%;}
+    .col-7 {width: 29.16%;}
+    .col-8 {width: 33.33%;}
+    .col-9 {width: 37.5%;}
+    .col-10 {width: 41.66%;}
+    .col-11 {width: 45.83%;}
+    .col-12 {width: 50%;}
+    .col-13 {width: 54.16%;}
+    .col-14 {width: 58.33%;}
+    .col-15 {width: 62.5%;}
+    .col-16 {width: 66.66%;}
+    .col-17 {width: 70.83%;}
+    .col-18 {width: 75%;}
+    .col-19 {width: 79.16%;}
+    .col-30 {width: 83.33%;}
+    .col-21 {width: 87.5%;}
+    .col-22 {width: 91.66%;}
+    .col-23 {width: 95.83%;}
+    .col-24 {width: 100%;}
+}
+
+  /** top navbar **/
+
+a.nav, a.logo {
+    color: #f2f2f2;
+}
+.header ul li a{
+    color: #f2f2f2;
+}
+.header {
+    background-color: #333;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 10000;
+    height: auto;
+}
+
+/* Section and Article padding */
+section{
+    padding: 1rem;
+}
+
+article {
+    padding: 1rem;
+}
+
+/* Mid box styling */
+.box-mid {
+    background-color: #cd3333;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Styling for game options button */
+.game-option-btn {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Styling for game area */
+.game-area {
+    background-color: aquamarine;
+}
+
+/* Body styling */
+.body {
+    min-height: 100vh;
+    min-width: 100vh;
+    background-color: #333;
+    color: #f2f2f2;
+}
+
+/* Heading 1 styling */
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+/* Heading 2 styling */
+h2 {
+    font-size: 40px;
+}
+
+/* Paragraph styling */
+p {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Actions styling */
+.actions {
+    display: flex;
+    justify-content: center;
+}
+
+/* Button styling within actions */
+.actions button {
+    padding: 8px 16px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: aqua;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Grid container styling */
+.grid-container {
+    display: grid;
+    justify-content: center;
+    grid-gap: 16px;
+    grid-template-columns: repeat(8, 200px);
+    grid-template-rows: repeat(2, calc(200px / 2 * 3 ));
+    color: #cd3333;
+}
+
+/* Media queries for different screen sizes */
+@media only screen and (max-width: 1860px) {
+    .grid-container {
+        display: grid;
+        justify-content: center;
+        grid-gap: 16px;
+        grid-template-columns: repeat(7, 200px);
+        grid-template-rows: repeat(2, calc(200px / 2 * 3 ));
+        color: #cd3333;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .grid-container {
+        display: grid;
+        justify-content: center;
+        grid-gap: 16px;
+        grid-template-columns: repeat(6, 200px);
+        grid-template-rows: repeat(2, calc(200px / 2 * 3 ));
+        color: #cd3333;
+    }
+}
+
+@media only screen and (max-width: 1260px) {
+    .grid-container {
+        display: grid;
+        justify-content: center;
+        grid-gap: 16px;
+        grid-template-columns: repeat(5, 200px);
+        grid-template-rows: repeat(2, calc(200px / 2 * 3 ));
+        color: #cd3333;
+    }
+}
+
+/* Card styling */
+.card {
+    height: calc(200px / 2 * 3);
+    width: 200px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    border: #cd3333 solid 10px;
+}
+
+/* Front image styling */
+.front-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    /* border-radius: 10px;
+    border: #cd3333 solid 10px; */
+}
+
+/* Flipped card styling */
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Front and back face styling for cards */
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #cd3333;
+}
+
+/* Styling for the front face of the card */
+.card .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    /* color: #cd3333; */
+    background-color: #ffffff;
+}
+
+/* Styling for the back face of the card */
+.card .back {
+    background-image: url("../assets/card-imgs/apex.png");
+    background-position: center center;
+    background-size: cover;
+    backface-visibility: hidden;
+    background-color: #cd3333;
+    color: #cd3333;
+
+}
+
+/* Styling for scores */
+.score {
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+/* Styling for score1 */
+.score1 {
+    border: 3px solid #f2f2f2;
+    border-radius: 5px;
+    background-color: #555454 ;
+}
+
+/* Styling for score1 */
+.score2 {
+    border: none;
+}
+
+/* Winner div styling */
+.winner-div {
+    display: grid;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 30px;
+}
+
+/* Scoreboard div styling */
+.scoreboard-div {
+    display: grid;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 30px;
+}
+
+/* Styling for scoreboard */
+.scoreboard {
+    text-align: center;
+}
+
+/* Styling for scoreboard list items */
+.scoreboard li {
+    list-style: none;
+}
+
+/* Startmenu-div styling */
+.startmenu-div {
+    display: flex;
+    justify-content: center;
+}
+
+/* Button styling within startmenu */
+.startmenu {
+    padding: 8px 16px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: aqua;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #555454;
+
+}
+/* Footer text styling */
+.footer-text {
+    font-size: 1rem;
+}
