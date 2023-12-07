@@ -349,6 +349,11 @@ p {
 /* Footer styling */
 .footer {
     background-color: #555454;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
 }
 /* Footer text styling */
 .footer-text {
