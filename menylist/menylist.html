@@ -1,58 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Items List</title>
-  <script src="db.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information and new functions in Microsoft Windows 11">
+    <title>Restaurang</title>
+    <script src="db.js"></script>
+
+        <!-- css -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- javascript -->
+        <script src="js/header.js" defer></script>
+        <script src="js/currentYear.js" defer></script>
+
+
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 <body>
 
-  <div id="itemLists"></div>
 
-  <script>
+    <!-- Header responsive -->
+    <header class="header" id="header-id">
+        <div class="top-header">
+            <!-- Shopping cart link -->
+            <div id="cart-div">
+                <a href="#" class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+
+            <!-- Logo -->
+            <div class="logo-div-main">
+                <a href="#" class="logo-main">
+                    <img src="img/logoLarge.png" width="61" height="61" id="logo-img-main" alt="Home logo icon">
+                </a>
+            </div>
+
+            <!-- Navbar -->
+            <nav id="main-nav">
+                <!-- Hamburger icon -->
+                <input class="menu-btn" type="checkbox" id="menu-btn">
+                <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+
+                <!-- Menu -->
+                <ul class="menu">
+                    <li class=""><a href="#">Menu</a></li>
+                    <li class=""><a href="#">Order</a></li>
+                    <li class=""><a href="#">Contact us</a></li>
+                    <li class=""><a href="#">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!--
+    <div class="row">
+        <div class="col-2"></div>
+        <nav class="col-8 fixed-menu-div">
+            <ul class="fixed-menu-ul">
+                <li class=""><a href="#">Menu</a></li>
+                <li class=""><a href="#">Order</a></li>
+                <li class=""><a href="#">Contact us</a></li>
+                <li class=""><a href="#">About us</a></li>
+            </ul>
+        </nav>
+    </div>-->
+<div class="row">
+    <div class="col-12 top-spacer"></div>
+</div>
+
+<!-- example body -->
+<!-- main -->
+<main>
+    <!-- row of content -->
+<!-- <div class="row"> -->
+    <!-- empty column as padding -->
+    <!-- <div class="col-2"></div> -->
+        <!-- content column -->
+        <!-- <section class="col-12 test1"> -->
+            <!-- <h1>Restaurang</h1> -->
+        <!-- </section> -->
+<!-- </div> -->
+
+
+
+<ul id="bbqList"></ul>
+
+<script>
+
+  // Check if db
+  if (db && db.bbqs) {
+    // Get the UL element where we will display the list
+    var bbqListElement = document.getElementById("bbqList");
+
     
+    db.bbqs.forEach(bbq => {
+      // Create a list 
+      var listItem = document.createElement("li");
 
-    // Check db
-    if (db) {
-      // Get the element where we will display the lists
-      var itemListsContainer = document.getElementById("itemLists");
+      // Set the HTML content of the list 
+      listItem.innerHTML = `
+        <strong>${bbq.name}</strong><br>
+        <img src="${bbq.img}" alt="${bbq.name}" width="100"><br>
+        ${bbq.dsc}<br>
+        Price: $${bbq.price.toFixed(2)}<br>
+        Country: ${bbq.country}
+      `;
 
-      
-      for (var category in db) {
-        if (db.hasOwnProperty(category)) {
-          // Create a header for the category
-          var categoryHeader = document.createElement("h2");
-          categoryHeader.textContent = category;
-          itemListsContainer.appendChild(categoryHeader);
+      // Append the list item to the UL element
+      bbqListElement.appendChild(listItem);
+    });
+  } else {
+    console.log("No BBQs found in the database.");
+  }
+</script>
 
-          // Create a list for the category
-          var categoryList = document.createElement("ul");
 
-          // Go through the items in the category and create list items
-          db[category].forEach(item => {
-            // Create a list item
-            var listItem = document.createElement("li");
 
-            // Set the HTML content of the list item
-            listItem.innerHTML = `
-              <strong>${item.name}</strong><br>
-              <img src="${item.img}" alt="${item.name}" width="100"><br>
-              ${item.dsc}<br>
-              Price: $${item.price.toFixed(2)}<br>
-              Country: ${item.country}
-            `;
 
-            // Append the list item to the category list
-            categoryList.appendChild(listItem);
-          });
 
-          // Append the category list to the container
-          itemListsContainer.appendChild(categoryList);
-        }
-      }
-    } 
-  </script>
+</main>
+
+
+<!-- footer responsive -->
+<!--
+<footer class="footer-div">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-2">
+            <h4 class="footer-h4">Food</h4>
+            <ul class="footer-ul">
+                <li class="footer-li">
+                    <a class="footer-link" href="#">Menu</a>
+                </li>
+                <li class="footer-li">
+                    <a class="footer-link" href="#">Drick</a>
+                </li>
+                <li class="footer-li">
+                    <a class="footer-link" href="#">Order</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-2">
+            <h4 class="footer-h4">About us</h4>
+            <ul class="footer-ul">
+                <li class="footer-li">
+                    <a class="footer-link" href="#">Opening hours</a>
+                </li>
+                <li class="footer-li">
+                    <a class="footer-link" href="#">Things</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-2">
+            <h4 class="footer-h4">Opening hours</h4>
+            <ul class="footer-ul">
+                <li class="footer-li">
+                    <a class="footer-link" href="#">Things</a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+
+    <!-- copyright with year js -->
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-10 footer-text-center">
+        <p class="footer-copyright">© <span id="copyright"></span> Restaurant  |  <a href="#">Privacy policy</a></p>
+    </div>
+</div>
+
+</footer>
 
 </body>
 </html>
