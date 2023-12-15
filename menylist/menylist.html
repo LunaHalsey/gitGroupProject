@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Items List</title>
+  <script src="db.js"></script>
+</head>
+<body>
+
+  <div id="itemLists"></div>
+
+  <script>
+    
+
+    // Check db
+    if (db) {
+      // Get the element where we will display the lists
+      var itemListsContainer = document.getElementById("itemLists");
+
+      
+      for (var category in db) {
+        if (db.hasOwnProperty(category)) {
+          // Create a header for the category
+          var categoryHeader = document.createElement("h2");
+          categoryHeader.textContent = category;
+          itemListsContainer.appendChild(categoryHeader);
+
+          // Create a list for the category
+          var categoryList = document.createElement("ul");
+
+          // Go through the items in the category and create list items
+          db[category].forEach(item => {
+            // Create a list item
+            var listItem = document.createElement("li");
+
+            // Set the HTML content of the list item
+            listItem.innerHTML = `
+              <strong>${item.name}</strong><br>
+              <img src="${item.img}" alt="${item.name}" width="100"><br>
+              ${item.dsc}<br>
+              Price: $${item.price.toFixed(2)}<br>
+              Country: ${item.country}
+            `;
+
+            // Append the list item to the category list
+            categoryList.appendChild(listItem);
+          });
+
+          // Append the category list to the container
+          itemListsContainer.appendChild(categoryList);
+        }
+      }
+    } 
+  </script>
+
+</body>
+</html>
