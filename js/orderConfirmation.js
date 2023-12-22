@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
     // Clear order and cart details from session storage
-    // // // sessionStorage.removeItem("orderDetails");
-    // // // sessionStorage.removeItem("cart");
+    sessionStorage.removeItem("orderDetails");
+    sessionStorage.removeItem("cart");
 
 });
