@@ -1,0 +1,547 @@
+/* Set character encoding to UTF-8 */
+@charset "UTF-8";
+
+/* Apply box-sizing to all elements */
+* {
+	box-sizing: border-box;
+}
+
+/* Styles for the main content area */
+main {
+	/* background-color: var(--dark-background); */
+}
+
+/* section {
+	padding: 1rem;
+}
+
+article {
+	padding: 1rem;
+} */
+
+/* Header 1 styling */
+h1 {
+	/* font-family: Verdana, "Geneva", Tahoma, sans-serif; */
+	font-family: "Belleza", sans-serif;
+	text-align: center;
+	font-size: 2rem;
+	overflow-wrap: break-word;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+/* Header 2 styling */
+h2 {
+	/* font-family: Verdana, "Geneva", Tahoma, sans-serif; */
+	font-family: "Belleza", sans-serif;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+/* Header 3 styling */
+h3 {
+	/* font-family: Verdana, "Geneva", Tahoma, sans-serif; */
+	font-family: "Belleza", sans-serif;
+	margin: 0;
+	margin-top: 50px;
+	margin-bottom: 1rem;
+}
+
+/* Header 4 styling */
+h4 {
+	/* font-family: Verdana, "Geneva", Tahoma, sans-serif; */
+	font-family: "Belleza", sans-serif;
+	margin: 0;
+	margin-top: 50px;
+	margin-bottom: 1rem;
+}
+
+/* Body styling */
+body {
+	line-height: 1.5;
+	/* font-family: "Open Sans", sans-serif; */
+	font-family: "Belleza", sans-serif;
+	width: 100vw;
+	padding: 0;
+	margin: 0;
+}
+
+/* Define color variables */
+:root {
+	--dark-background: #494747;
+	--light-background: #FFFFFF;
+	--grey-background: #e4e3e3;
+	--red-background-light: #894E4E;
+	--dark-text: #272626;
+	--light-text: #FFFFFF;
+	--button-color-1: #aaaaaa;
+	--button-color-2: #1b1b1b;
+}
+
+/* Clearfix for rows */
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Define column layout for small screens */
+[class*="col-"] {
+	float: left;
+	width: 100vw;
+	/* Uncomment the line below to add padding to columns on small screens */
+	/* padding: 1rem; */
+}
+
+/* Define row width */
+.row {
+	width: 100vw;
+}
+
+/* Responsive layout for larger screens */
+@media only screen and (min-width: 600px) {
+	/* Column width definitions for larger screens */
+	.col-1 {
+		width: 8.33%;
+	}
+
+	.col-2 {
+		width: 16.66%;
+	}
+
+	.col-3 {
+		width: 25%;
+	}
+
+	.col-4 {
+		width: 33.33%;
+	}
+
+	.col-5 {
+		width: 41.66%;
+	}
+
+	.col-6 {
+		width: 50%;
+	}
+
+	.col-7 {
+		width: 58.33%;
+	}
+
+	.col-8 {
+		width: 66.66%;
+	}
+
+	.col-9 {
+		width: 75%;
+	}
+
+	.col-10 {
+		width: 83.33%;
+	}
+
+	.col-11 {
+		width: 91.66%;
+	}
+
+	.col-12 {
+		width: 100%;
+	}
+}
+
+/** Styling for the top navbar **/
+
+/* Styling for top navbar links */
+.menu li a {
+	color: var(--dark-text);
+}
+
+/* Styling for the top navbar */
+.header {
+	background-color: var(--light-background);
+	/* box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1); */
+	position: fixed;
+	width: 100%;
+	height: 80px;
+	z-index: 10000;
+	/* height: auto; */
+
+
+	/* background-color: var(--light-background);
+	position: fixed;
+	width: 100%;
+	height: 80px; */
+}
+
+/* Header ID transition effect */
+#header-id {
+	max-height: 300px;
+	transition: 0.4s;
+	height: 200px;
+	padding-bottom: 1px;
+}
+
+/* Logo image styling */
+.logoimg {
+	width: auto;
+	padding: 0;
+	position: relative;
+
+}
+
+.logo-div-main {
+
+
+}
+
+/* Styling for the main logo image */
+#logo-img-main {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-width: 100px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 100px;
+	padding-top: 3rem;
+}
+
+/* Header ul styling */
+.menu {
+	/* display: block; */
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	padding-top: 20px;
+	list-style: none;
+	overflow: hidden;
+	background-color: var(--light-background);
+	width: auto;
+	font-size: 1.3rem;
+	right: 10%;
+	top: 140px;
+
+	/* margin: 0;
+	padding: 0;
+	padding-top: 20px;
+	list-style: none;
+	overflow: hidden;
+	background-color: transparent;
+	position: absolute;
+	top: 130px;
+	right: 45px;
+	width: 300px; */
+}
+
+.menu li {
+	background-color: var(--grey-background);
+}
+
+/* Header ul link styling */
+.menu a {
+	display: block;
+	padding: 1.2rem 2rem 1.2rem 2rem;
+	text-decoration: none;
+}
+
+/* Header ul link hover effect */
+.menu a:hover {
+	background-color: var(--dark-background);
+	color: var(--light-text);
+}
+
+/* Header menu styles */
+.header .menu {
+	clear: both;
+	max-height: 0;
+	transition: max-height .2s ease-out;
+	background-color: transparent;
+}
+
+.header .dropdown-menu {
+	background-color: var(--grey-background);
+	/* padding: 1rem; */
+}
+
+/* new */
+.header .menu-icon {
+	background-color: var(--grey-background);
+	/* padding-top: 20px; */
+	width: 4rem;
+	height: 4rem;
+	position: relative;
+	float: left;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+	/* padding-left: 7%; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+}
+
+/* Header menu icon styles */
+.header .menu-icon {
+	/* padding: 28px 20px; */
+	/* padding-top: 20px; */
+	position: relative;
+	float: left;
+	cursor: pointer;
+	/* padding-left: 40%; */
+}
+
+/* Styling for the navigation icon in the menu */
+.header .menu-icon .nav-icon {
+	background: var(--dark-text);
+	display: block;
+	height: 4px;
+	width: 32px;
+	position: relative;
+	transition: background .2s ease-out;
+}
+
+/* Styling for the top and bottom bars of the navigation icon */
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+	background: var(--dark-text);
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+}
+
+/* Styling for the top bar of the navigation icon */
+.header .menu-icon .nav-icon:before {
+	top: 10px;
+}
+
+/* Styling for the bottom bar of the navigation icon */
+.header .menu-icon .nav-icon:after {
+	top: -10px;
+}
+
+/* Styling for the menu button */
+.header .menu-btn {
+	display: none;
+}
+
+/* Styling for the menu button when checked */
+.header .menu-btn:checked~.menu {
+	max-height: 1000px;
+}
+
+/* Styling for the menu icon when menu button is checked */
+.header .menu-btn:checked~.menu-icon .nav-icon {
+	background: transparent;
+}
+
+/* Styling for the top bar of the navigation icon when menu button is checked */
+.header .menu-btn:checked~.menu-icon .nav-icon:before {
+	transform: rotate(-45deg);
+	top: 0;
+}
+
+/* Styling for the bottom bar of the navigation icon when menu button is checked */
+.header .menu-btn:checked~.menu-icon .nav-icon:after {
+	transform: rotate(45deg);
+	top: 0;
+}
+
+/* Styling for the main navigation menu */
+#main-nav {
+	padding-top: 4rem;
+	min-width: 136px;
+	text-align: center;
+	display: flex;
+	/* justify-content: center; */
+	flex-direction: column;
+}
+
+/* Styling for the top header section */
+.top-header {
+	/* background-color: var(--light-background); */
+	display: flex;
+	justify-content: space-around;
+
+	min-height: 4rem;
+	min-height: 96px;
+}
+
+/* Styling for the cart div */
+#cart-div {
+	padding-top: 4rem;
+	width: auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	min-width: 136px;
+}
+
+/* Styling for the cart icon */
+.cart {
+	font-size: 3rem;
+	color: var(--dark-text);
+}
+
+/************ TEST DIV ***************/
+
+/* Styling for test div 1 */
+	/* .test1 {
+		min-height: 500px;
+		background-color: cyan;
+	} */
+
+
+
+/* Styling for the footer section */
+	/* .footer-div {
+		background-color: #bebebe;
+		margin-top: 1rem;
+	}*/
+
+/* Styling for the footer heading */
+	/* .footer-h4 {
+		text-align: center;
+	} */
+
+/* Styling for the footer unordered list */
+	/* .footer-ul {
+		text-align: center;
+		list-style-type: none;
+		padding: 0;
+	} */
+
+/* Styling for the fixed navigation menu */
+	/* .fixed-menu-div {
+		margin-top: 200px;
+		padding: 0;
+		padding-top: 1rem;
+	} */
+
+/* Styling for the fixed menu unordered list */
+	/* .fixed-menu-ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333333;
+		text-align: center;
+	} */
+
+/* Styling for the fixed menu list items */
+	/* .fixed-menu-ul li {
+		float: left;
+		padding: 1rem;
+	} */
+
+/* Styling for the fixed menu text */
+	/* .fixed-menu-div {
+		color: #f2f2f2;
+	} */
+
+/* Styling for the fixed menu links */
+	/* .fixed-menu-ul li a {
+		color: #f2f2f2;
+		text-decoration: none;
+	} */
+
+/* Styling for the hover effect on fixed menu links */
+	/* .fixed-menu-ul a:hover {
+		background-color: #f2f2f2;
+		color: #333;
+	} */
+
+/* Styling for the fixed menu text */
+	/* .fixed-menu-div {
+		text-decoration: none;
+	} */
+
+/* Styling for row spacer */
+.row-spacer {
+	margin-top: 1rem;
+}
+
+/* Styling for top spacer */
+.top-spacer {
+	padding: 100px;
+	background-color: var(--light-background);
+}
+
+/* Styling for dark background section */
+.dark-background {
+	background-color: var(--dark-background);
+	padding-bottom: 1rem;
+	color: var(--light-text);
+	text-align: center;
+}
+
+/* Styling for unordered list with free styling */
+.ul-style-free {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Styling for rounded horizontal rule */
+hr.rounded {
+	border-top: 2px solid var(--light-text);
+	border-radius: 5px;
+	width: 60%;
+	max-width: 15rem;
+}
+
+/* Styling for red background section */
+.red-background {
+	background-color: var(--red-background-light);
+	color: var(--light-text);
+	text-align: center;
+	padding: 4rem;
+}
+
+/* Styling for grey background section */
+.grey-background-flex {
+	background-color: var(--grey-background);
+	color: var(--dark-text);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	/* padding: 9rem; */
+}
+
+.padding {
+	padding: 1rem;
+}
+
+/* Styling for index buttons section */
+.index-buttons {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Styling for index buttons */
+.index-btn {
+	background-color: var(--grey-background);
+	color: var(--dark-text);
+	text-decoration: none;
+	width: 15rem;
+	/* max-width: 8rem; */
+	margin-top: 2rem;
+	padding: 1.5rem 1rem 1.5rem 1rem;
+}
+
+.footer-text-center {
+	display: flex;
+	justify-content: center;
+}
+
