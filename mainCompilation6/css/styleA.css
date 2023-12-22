@@ -1,0 +1,249 @@
+/* Set character encoding to UTF-8 */
+@charset "UTF-8";
+
+/* Styling for the order list */
+#orderList {
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+/* Styling for div elements within the order list */
+#orderList div {
+	margin-bottom: 5px;
+}
+
+/* Styling for buttons */
+button {
+	padding: 10px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.products-main {
+	padding-top: 1rem;
+	background-color: var(--red-background-light);
+}
+
+.h-white {
+	color: var(--light-text);
+}
+
+/* Styling for the product carousel container */
+#productCarousel {
+	position: relative;
+	overflow: hidden;
+	margin-top: 20px;
+}
+
+/* Styling for the carousel container inside the product carousel */
+	/* #carouselContainer {
+		display: flex;
+		transition: transform 0.5s ease-in-out;
+	} */
+
+/* Styling for carousel images */
+.carousel-image {
+	max-width: 500px;
+	max-height: 500px;
+	padding: 1rem;
+	width: 100%;
+	height: auto;
+}
+
+/* Styling for the container of carousel data */
+.carousel-data-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Styling for the div containing carousel selection options */
+.carousel-select-div {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+/* Styling for carousel selection options */
+.carousel-select {
+	background-color: #333;
+	font-size: 2rem;
+	color: #f2f2f2;
+	margin: 1rem;
+}
+
+/* Styling for carousel items */
+.carousel-item {}
+
+/* Styling for previous and next buttons in the carousel */
+	/* #prevBtn,
+	#nextBtn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 20px;
+		background: none;
+		border: none;
+		cursor: pointer;
+	} */
+
+/* Styling for the previous button */
+	/* #prevBtn {
+		left: 10px;
+	} */
+
+/* Styling for the next button */
+	/* #nextBtn {
+		right: 10px;
+	} */
+
+#products {
+	background-color: var(--red-background-light);
+	color: var(--light-text);
+}
+
+.products-div {
+	background-color: var(--red-background-light);
+	color: var(--light-text);
+}
+
+/* Styling for product buttons */
+.product-button {
+	background-color: var(--button-color-1);
+	color: var(--button-color-2);
+	width: 5rem;
+	padding: 1rem;
+	font-size: 1.5rem;
+	margin: 1rem;
+	border-radius: 0.5rem;
+}
+
+/* Styling for product containers */
+.product-container {
+	width: 20rem;
+	min-height: 40rem;
+	margin: 1rem;
+	max-width: 300px;
+	background-color: var(--grey-background);
+	padding: 1rem;
+	color: var(--dark-text);
+}
+
+/* Styling for the div containing category products */
+.category-products-div {
+	display: flex;
+	justify-content: center;
+}
+
+/* Styling for product images */
+.product-image {
+	max-width: 268px;
+	max-height: auto;
+	min-height: 200px;
+}
+
+/* Styling for the category section */
+.category-section {}
+
+/* Styling for the div containing category products */
+.category-products-div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: var(--red-background-light);
+}
+
+/* Styling for product details */
+.product-details {
+	min-height: 20rem;
+}
+
+/* Quantity counter styling */
+.quantity-counter {
+	font-size: 2rem;
+	padding: 0.6rem;
+	border: #ffffff solid 2px ;
+	border-radius: 0.5rem;
+}
+
+/* Styling for the order form container */
+#order-form {
+	display: flex;
+	justify-content: center;
+}
+
+/* Styling for the order form */
+.order-form-class {
+	display: flex;
+	flex-direction: column;
+	min-width: 200px;
+	max-width: 40%;
+	width: 100%;
+	padding: 1rem;
+	background-color: var(--grey-background);
+	border-radius: 1rem;
+}
+
+/* Styling for the form related to the shopping cart */
+.form-cart {
+	padding: 1rem;
+	min-width: 170px;
+	max-width: 800px;
+	width: 100%;
+}
+
+/* Styling for the buy button within the form */
+.button-buy {
+	display: flex;
+	justify-content: center;
+
+}
+
+/* Styling for the buy button in the form */
+.form-cart-buy {
+	margin-top: 2rem;
+	padding: 1rem 2rem 1rem 2rem;
+	text-align: center;
+	background-color: #333;
+	color: #f2f2f2;
+	font-size: 2rem;
+	max-width: 80%;
+	border-radius: 1rem;
+}
+
+/* Styling for the div displaying order details */
+.order-details-div {
+	display: flex;
+	justify-content: center;
+	background-color: var(--red-background-light);
+	color: var(--light-text);
+	text-align: center;
+
+}
+
+/* Styling for the total cost element */
+#total-cost {
+	text-align: center;
+	font-size: 2rem;
+}
+
+/* Order confirm list styling */
+.order-confirm-list {
+	list-style-type: none;
+}
+
+/* Large image div */
+.image-div-col-6 {
+	max-width: fit-content;
+	max-height: 400px;
+}
+
+/* Large image styling */
+.image-col-6 {
+	object-fit: cover;
+	object-position: 50% -350px;
+	width: 100%;
+	aspect-ratio: 12/10;
+}
